@@ -1,5 +1,6 @@
 import { urlFor } from '@/lib/sanityClient';
 import Image from 'next/image';
+import ReactMarkdown from 'react-markdown';
 
 // Define the Host component props type
 interface HostProps {
@@ -36,7 +37,7 @@ const Host: React.FC<HostProps> = ({
 
       <div>
         <h4 className='text-lg font-bold'>{name}</h4>
-        <p className='mt-1'>{bio}</p>
+        <ReactMarkdown className='prose dark:prose-invert'>{bio}</ReactMarkdown>
         <a
           href={`mailto:${email}`}
           className='block text-sm text-blue-600 hover:underline'

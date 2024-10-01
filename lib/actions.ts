@@ -37,6 +37,6 @@ export async function getMeetings(): Promise<Meeting[]> {
   }`;
 
   // Fetch data from Sanity
-  const meetings: Meeting[] = await client.fetch(query);
+  const meetings: Meeting[] = await client.fetch(query, undefined, { cache: 'no-store' });
   return meetings;
 }
