@@ -7,7 +7,7 @@ export default async function CalendarPage() {
   return (
     <div className='mx-auto max-w-7xl sm:px-6 lg:px-8'>
       <h1>Upcoming Meetings</h1>
-      <ul>
+      <ul role='list' className='divide-y divide-gray-200'>
         {meetings.map((meeting) => (
           <MeetingCard key={meeting._id} meeting={meeting} />
         ))}
