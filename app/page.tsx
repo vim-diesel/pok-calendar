@@ -1,4 +1,5 @@
-import { getMeetings, Meeting } from '@/lib/actions';
+import { getMeetings } from '@/lib/actions';
+import { Meeting } from '@/lib/types';
 import MeetingCard from './MeetingCard';
 
 export default async function CalendarPage() {
@@ -7,7 +8,7 @@ export default async function CalendarPage() {
   return (
     <div className='mx-auto max-w-7xl sm:px-6 lg:px-8'>
       <h1>Upcoming Meetings</h1>
-      <ul role='list' >
+      <ul>
         {meetings.map((meeting) => (
           <MeetingCard key={meeting._id} meeting={meeting} />
         ))}
