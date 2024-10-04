@@ -1,6 +1,7 @@
 'use server';
 
 import client from '@/lib/sanityClient';
+import { Meeting } from './types';
 
 export async function getMeetings(): Promise<Meeting[]> {
   const query = `*[_type == "meeting"] {
