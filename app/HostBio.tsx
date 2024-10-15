@@ -1,6 +1,6 @@
-import { urlFor } from '@/lib/sanityClient';
-import Image from 'next/image';
-import ReactMarkdown from 'react-markdown';
+import { urlFor } from "@/lib/sanityClient";
+import Image from "next/image";
+import ReactMarkdown from "react-markdown";
 
 // Define the Host component props type
 interface HostProps {
@@ -23,9 +23,9 @@ const Host: React.FC<HostProps> = ({
   profilePhoto,
 }) => {
   return (
-    <div className='sm:flex'>
+    <div className="sm:flex">
       {profilePhoto && (
-        <div className='mb-4 flex-shrink-0 sm:mb-0 sm:mr-4'>
+        <div className="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
           <Image
             src={urlFor(profilePhoto).width(100).url()}
             alt={`${name}'s profile photo`}
@@ -36,17 +36,17 @@ const Host: React.FC<HostProps> = ({
       )}
 
       <div>
-        <h4 className='text-lg font-bold'>{name}</h4>
-        <ReactMarkdown className='prose dark:prose-invert'>{bio}</ReactMarkdown>
+        <h4 className="text-lg font-bold">{name}</h4>
+        <ReactMarkdown className="prose dark:prose-invert">{bio}</ReactMarkdown>
         <a
           href={`mailto:${email}`}
-          className='block text-sm text-blue-600 hover:underline'
+          className="block text-sm text-blue-600 hover:underline"
         >
           {email}
         </a>
         <a
           href={website}
-          className='block text-sm text-blue-600 hover:underline'
+          className="block text-sm text-blue-600 hover:underline"
         >
           {website}
         </a>
